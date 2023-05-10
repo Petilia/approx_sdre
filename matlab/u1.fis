@@ -1,0 +1,41 @@
+[System]
+Name='u1'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=4
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='w(velocity)'
+Range=[-0.941559444875707 0.992269433253771]
+NumMFs=2
+MF1='P':'smf',[-0.941862185778923 0.083296256462572]
+MF2='N':'zmf',[-0.143369776706806 0.865970898232008]
+
+[Input2]
+Name='q(angle)'
+Range=[-0.891889626726703 0.944859707716962]
+NumMFs=2
+MF1='N':'zmf',[-0.265679967778462 1.61869921078658]
+MF2='P':'smf',[-1.5905660149339 0.612035739510657]
+
+[Output1]
+Name='output1'
+Range=[-2.71728857703028 2.62992413766538]
+NumMFs=4
+MF1='c1':'constant',[3.68297322562188]
+MF2='c2':'constant',[-2.40020674679309]
+MF3='c3':'constant',[1.05240066070636]
+MF4='c4':'constant',[-2.36963488493148]
+
+[Rules]
+2 1, 1 (1) : 1
+1 1, 2 (1) : 1
+2 2, 3 (1) : 1
+1 2, 4 (1) : 1

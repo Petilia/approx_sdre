@@ -1,0 +1,41 @@
+[System]
+Name='ts_control_sigma_2'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=4
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='w(velocity)'
+Range=[-1 1]
+NumMFs=2
+MF1='P':'smf',[-1 1]
+MF2='N':'zmf',[-1 1]
+
+[Input2]
+Name='q(angle)'
+Range=[-1 1]
+NumMFs=2
+MF1='N':'zmf',[-1 1]
+MF2='P':'smf',[-1 1]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=4
+MF1='c1':'constant',[0]
+MF2='c2':'constant',[0.33]
+MF3='c3':'constant',[0.67]
+MF4='c4':'constant',[1]
+
+[Rules]
+2 1, 1 (1) : 1
+1 1, 2 (1) : 1
+2 2, 3 (1) : 1
+1 2, 4 (1) : 1
