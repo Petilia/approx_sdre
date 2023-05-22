@@ -1,5 +1,9 @@
 *.pth
 *.jpg
+*pickle
+
+data/*
+old_data/*
 
 __pycache__
 wandb

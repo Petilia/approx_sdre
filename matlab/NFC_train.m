@@ -30,7 +30,7 @@ function [NFC1, NFC2, NFC3] = NFC_train(generate_flag, validate_flag, n0, w_rang
     end
     
     tic
-    NFC1 = anfis(squeeze(dataset(:, 1, :)), opt1);
+    NFC 1 = anfis(squeeze(dataset(:, 1, :)), opt1);
     NFC2 = anfis(squeeze(dataset(:, 2, :)), opt2);
     NFC3 = anfis(squeeze(dataset(:, 3, :)), opt3);
     toc
