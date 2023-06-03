@@ -2,6 +2,7 @@
 *.jpg
 *pickle
 
+additional_data/*
 data/*
 old_data/*
 
